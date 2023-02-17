@@ -6,7 +6,7 @@ import axios from "axios";
 import {BACK_END} from "../../constants/shared";
 
 const Main:React.FC = ()=> {
-    const [state, setState] = useState({status: false, userName: 'Позивний',  code: '', report: 0})
+    const [state, setState] = useState({status: false, user: 'Позивний',  code: '', report: 0})
     const [inputValue, setInputValue]=useState('')
     const [isAuthorised, setIsAuthorised] = useState(false)
 
@@ -43,7 +43,7 @@ const Main:React.FC = ()=> {
   return (
     <div>
         {isAuthorised ?
-            <div className={'main-page'}><Good userName={state.userName} state={state} setIsAuthorised={setIsAuthorised} setState={setState}/></div> :
+            <div className={'main-page'}><Good user={state.user} state={state} setIsAuthorised={setIsAuthorised} setState={setState}/></div> :
         <div className={'login-page'}>
          <TextField type='password' label="Пароль" autoComplete="off" variant="outlined" size='small' onChange={(e)=> {setInputValue(e.target.value)}} value={inputValue}/>
          <span style={{marginLeft: '10px', lineHeight: '35px'}}>

@@ -4,10 +4,10 @@ import axios from "axios";
 import {BACK_END} from "../../constants/shared";
 
 interface GoodProps {
-    userName: string
-    state: { status: boolean; userName: string; code: string; report: number; }
+    user: string
+    state: { status: boolean; user: string; code: string; report: number; }
     setIsAuthorised: Dispatch<SetStateAction<boolean>>
-    setState: Dispatch<SetStateAction<{ status: boolean; userName: string; code: string; report: number; }>>
+    setState: Dispatch<SetStateAction<{ status: boolean; user: string; code: string; report: number; }>>
 }
 
 const getDate = (milliseconds: number, isExtraHours: boolean)=>{
@@ -24,7 +24,7 @@ const getDate = (milliseconds: number, isExtraHours: boolean)=>{
     return  hours + ":" + minutes + ":" + seconds;
 }
 
-const Good: React.FC<GoodProps> = ({userName, state, setIsAuthorised, setState})=> {
+const Good: React.FC<GoodProps> = ({user, state, setIsAuthorised, setState})=> {
     const [ timeAgo, setTimeAgo]=useState(getDate(0, false))
     const lastReportTime = getDate(state.report, true)
 
@@ -70,7 +70,7 @@ const Good: React.FC<GoodProps> = ({userName, state, setIsAuthorised, setState})
 
      return (
     <div>
-        <h1 style={{color:'#808080', fontFamily:'monospace'}}>{userName}</h1>
+        <h1 style={{color:'#808080', fontFamily:'monospace'}}>{user}</h1>
         <Button variant="contained" color="success" style={{width: '150px', height: '150px', margin: 'auto', borderRadius: '150px', fontFamily: 'Ubuntu', fontSize: '22px', marginBottom: '20px'}} onClick={handleReport}>
             <h1>4.5.0</h1>
         </Button>
