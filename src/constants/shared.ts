@@ -1,3 +1,3 @@
 export const BACK_END = {
-    URL: 'https://report-status.herokuapp.com/'
+    URL: process.env.REACT_APP_API
 }
