@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/report-status-spa/static/css/main.bf821ab8.css",
+    "main.js": "/report-status-spa/static/js/main.07df332b.js",
+    "index.html": "/report-status-spa/index.html",
+    "main.bf821ab8.css.map": "/report-status-spa/static/css/main.bf821ab8.css.map",
+    "main.07df332b.js.map": "/report-status-spa/static/js/main.07df332b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf821ab8.css",
+    "static/js/main.07df332b.js"
+  ]
+}
